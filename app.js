@@ -5,10 +5,10 @@ const SNIPPETS = {
   -F "size=auto" \\
   https://api.remove.bg/v1.0/removebg -o no-bg.png`,
     after: `curl -H "X-RapidAPI-Key: YOUR_RAPIDAPI_KEY" \\
-  -H "X-RapidAPI-Host: YOUR_RAPIDAPI_HOST" \\
+  -H "X-RapidAPI-Host: removebg12.p.rapidapi.com" \\
   -F "image_file=@photo.jpg" \\
   -F "size=auto" \\
-  https://YOUR_RAPIDAPI_HOST/v1.0/removebg -o no-bg.png`,
+  https://removebg12.p.rapidapi.com/v1.0/removebg -o no-bg.png`,
   },
   python: {
     before: `import requests
@@ -23,12 +23,12 @@ open("no-bg.png", "wb").write(resp.content)`,
     after: `import requests
 
 resp = requests.post(
-    "https://YOUR_RAPIDAPI_HOST/v1.0/removebg",
+    "https://removebg12.p.rapidapi.com/v1.0/removebg",
     files={"image_file": open("photo.jpg", "rb")},
     data={"size": "auto"},
     headers={
         "X-RapidAPI-Key": "YOUR_RAPIDAPI_KEY",
-        "X-RapidAPI-Host": "YOUR_RAPIDAPI_HOST",
+        "X-RapidAPI-Host": "removebg12.p.rapidapi.com",
     },
 )
 open("no-bg.png", "wb").write(resp.content)`,
@@ -48,11 +48,11 @@ const buf = Buffer.from(await res.arrayBuffer());`,
 form.append("image_url", "https://example.com/photo.jpg");
 form.append("size", "auto");
 
-const res = await fetch("https://YOUR_RAPIDAPI_HOST/v1.0/removebg", {
+const res = await fetch("https://removebg12.p.rapidapi.com/v1.0/removebg", {
   method: "POST",
   headers: {
     "X-RapidAPI-Key": process.env.RAPIDAPI_KEY,
-    "X-RapidAPI-Host": "YOUR_RAPIDAPI_HOST",
+    "X-RapidAPI-Host": "removebg12.p.rapidapi.com",
   },
   body: form,
 });
@@ -67,10 +67,10 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, [
   "image_file" => new CURLFile("photo.jpg"),
   "size" => "auto"
 ]);`,
-    after: `$ch = curl_init("https://YOUR_RAPIDAPI_HOST/v1.0/removebg");
+    after: `$ch = curl_init("https://removebg12.p.rapidapi.com/v1.0/removebg");
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
   "X-RapidAPI-Key: YOUR_RAPIDAPI_KEY",
-  "X-RapidAPI-Host: YOUR_RAPIDAPI_HOST"
+  "X-RapidAPI-Host: removebg12.p.rapidapi.com"
 ]);
 curl_setopt($ch, CURLOPT_POSTFIELDS, [
   "image_file" => new CURLFile("photo.jpg"),

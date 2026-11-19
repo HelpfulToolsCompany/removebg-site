@@ -8,10 +8,10 @@
 - Privacy: Images are processed in memory (ISNet general use) and never stored.
 
 ## Migration Instructions (for Humans & Coding Agents)
-1. Replace `https://api.remove.bg/v1.0/removebg` with your RapidAPI endpoint URL `https://<RAPIDAPI_HOST>/v1.0/removebg`.
+1. Replace `https://api.remove.bg/v1.0/removebg` with your RapidAPI endpoint URL `https://removebg12.p.rapidapi.com/v1.0/removebg`.
 2. Replace header `X-Api-Key: <REMOVEBG_KEY>` with RapidAPI headers:
    - `X-RapidAPI-Key: <RAPIDAPI_KEY>`
-   - `X-RapidAPI-Host: <RAPIDAPI_HOST>`
+   - `X-RapidAPI-Host: removebg12.p.rapidapi.com`
 3. Keep all existing parameters unchanged:
    - Inputs: `image_file` (multipart), `image_url`, or `image_file_b64`
    - Options: `size` (`auto`, `preview`, `small`, `regular`, `medium`, `hd`, `4k`, `full`), `format` (`auto`, `png`, `jpg`, `jpeg`, `webp`), `bg_color`, `crop`
