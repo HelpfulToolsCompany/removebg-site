@@ -6,21 +6,18 @@
   <title>Background Remover API — Drop-in remove.bg Replacement | removebg.helpfultools.company</title>
   <meta name="description" content="remove.bg self-serve API shuts down Dec 1, 2026. Keep your exact POST /v1.0/removebg code. Swap two lines. From $0.0008/image on RapidAPI." />
   <link rel="canonical" href="https://removebg.helpfultools.company/" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a href="./" class="brand">
-        <span>removebg.helpfultools.company</span>
-        <span class="brand-badge">Drop-in API</span>
-      </a>
+      <a href="./" class="brand">removebg.helpfultools.company</a>
       <nav class="nav-links">
         <a href="#migrate">Migration</a>
         <a href="#agents">For Agents</a>
         <a href="#pricing">Pricing</a>
-        <a href="#specs">Specs</a>
-        <a href="https://rapidapi.com" target="_blank" rel="noopener" class="btn btn-primary">Get API Key on RapidAPI</a>
+        <a href="llms.txt">llms.txt</a>
+        <a href="https://rapidapi.com" target="_blank" rel="noopener" class="btn btn-primary">Get API Key</a>
       </nav>
     </div>
   </header>
@@ -28,15 +25,15 @@
   <main>
     <section class="hero">
       <div class="container">
-        <span class="eyebrow">remove.bg self-serve API stops Dec 1, 2026</span>
+        <p class="notice">Notice: remove.bg self-serve API stops Dec 1, 2026</p>
         <h1>Same call as remove.bg. Change the URL and the key.</h1>
         <p class="subtitle">
-          Drop-in <code>POST /v1.0/removebg</code> compatibility. Upload <code>image_file</code>, <code>image_url</code>, or <code>image_file_b64</code> and get binary PNG, WebP, or JPG back—processed in memory, never stored. From <strong>$0.0008/image</strong> on RapidAPI.
+          Drop-in <code>POST /v1.0/removebg</code> compatibility. Send <code>image_file</code>, <code>image_url</code>, or <code>image_file_b64</code> and get binary PNG, WebP, or JPG back—processed in memory, never stored. From <strong>$0.0008/image</strong> on RapidAPI.
         </p>
         <div class="hero-actions">
           <a href="https://rapidapi.com" target="_blank" rel="noopener" class="btn btn-primary">Subscribe on RapidAPI</a>
-          <a href="#migrate" class="btn btn-secondary">See 2-Line Migration</a>
-          <a href="llms.txt" class="btn btn-secondary">llms.txt (For Agents)</a>
+          <a href="#migrate" class="text-link">2-line migration diff</a>
+          <a href="llms.txt" class="text-link">llms.txt for agents</a>
         </div>
       </div>
     </section>
@@ -57,14 +54,14 @@
           <div class="code-card">
             <div class="code-card-head">
               <span>Before (remove.bg)</span>
-              <span class="tag-before">Shutting down Dec 1</span>
+              <span class="tag-before">Stops Dec 1</span>
             </div>
             <pre id="code-before"></pre>
           </div>
           <div class="code-card">
             <div class="code-card-head">
               <span>After (HelpfulTools via RapidAPI)</span>
-              <span class="tag-after">Drop-in compatible</span>
+              <span class="tag-after">Drop-in</span>
             </div>
             <pre id="code-after"></pre>
           </div>
@@ -75,11 +72,11 @@
     <section id="agents" class="section">
       <div class="container">
         <h2 class="section-title">For coding agents &amp; automated migrations</h2>
-        <p class="section-sub">Point your AI coding agent at <a href="llms.txt" style="color:#93c5fd;text-decoration:underline;"><code>https://removebg.helpfultools.company/llms.txt</code></a> or paste this instruction directly:</p>
+        <p class="section-sub">Point your coding agent at <a href="llms.txt" class="text-link">llms.txt</a> or paste this instruction:</p>
         <div class="code-card">
           <div class="code-card-head">
             <span>Agent Migration Prompt</span>
-            <span class="tag-after">Zero payload changes</span>
+            <span class="tag-after">No payload changes</span>
           </div>
           <pre>Migrate all calls from https://api.remove.bg/v1.0/removebg to https://&lt;RAPIDAPI_HOST&gt;/v1.0/removebg.
 Replace the X-Api-Key header with X-RapidAPI-Key and X-RapidAPI-Host.
@@ -91,7 +88,7 @@ or binary response handling—the endpoint is 100% remove.bg v1.0 shape-compatib
 
     <section id="pricing" class="section">
       <div class="container">
-        <h2 class="section-title">Simple RapidAPI pricing</h2>
+        <h2 class="section-title">RapidAPI pricing</h2>
         <p class="section-sub">One RapidAPI key and one bill. Hard cap on Free—no surprise overages.</p>
 
         <div class="pricing-grid">
@@ -111,7 +108,7 @@ or binary response handling—the endpoint is 100% remove.bg v1.0 shape-compatib
             <div class="price-tier">Pro</div>
             <div class="price-amount">$9.99 <span>/ mo</span></div>
             <ul class="price-list">
-              <li>10,000 calls / month (<strong>$0.001 / image</strong>)</li>
+              <li>10,000 calls / month (<strong>$0.001 / img</strong>)</li>
               <li>Overage: $0.0015 / call</li>
               <li>In-memory processing, zero retention</li>
               <li><code>GET /v1.0/account</code> included</li>
@@ -123,7 +120,7 @@ or binary response handling—the endpoint is 100% remove.bg v1.0 shape-compatib
             <div class="price-tier">Ultra</div>
             <div class="price-amount">$39.99 <span>/ mo</span></div>
             <ul class="price-list">
-              <li>50,000 calls / month (<strong>$0.0008 / image</strong>)</li>
+              <li>50,000 calls / month (<strong>$0.0008 / img</strong>)</li>
               <li>Overage: $0.001 / call</li>
               <li>Built for batch &amp; e-commerce catalogs</li>
               <li>In-memory processing, zero retention</li>
@@ -136,8 +133,8 @@ or binary response handling—the endpoint is 100% remove.bg v1.0 shape-compatib
 
     <section id="specs" class="section">
       <div class="container">
-        <h2 class="section-title">What you get</h2>
-        <p class="section-sub">Plain engineering details—no hidden surprises.</p>
+        <h2 class="section-title">Technical details</h2>
+        <p class="section-sub">Plain engineering facts—no hidden caveats.</p>
         <div class="features-grid">
           <div class="feature-card">
             <h3>Exact API Shape</h3>
@@ -148,11 +145,11 @@ or binary response handling—the endpoint is 100% remove.bg v1.0 shape-compatib
             <p>Every image is decoded, segmented with ISNet (<code>isnet-general-use</code>), and returned strictly in memory. Nothing is written to disk or logged.</p>
           </div>
           <div class="feature-card">
-            <h3>Fast on Product Photos</h3>
-            <p>Clean cutouts on e-commerce products, studio shots, and general objects. Returns PNG, WebP, or JPEG.</p>
+            <h3>Product Photo Ready</h3>
+            <p>Clean cutouts on e-commerce products, studio shots, and general objects. Outputs PNG, WebP, or JPEG.</p>
           </div>
           <div class="feature-card">
-            <h3>Cold-Start Transparency</h3>
+            <h3>Cold-Start Note</h3>
             <p>Scales to zero when idle; the first call after idle can take ~10s while the container boots. Batch jobs are unaffected.</p>
           </div>
         </div>
