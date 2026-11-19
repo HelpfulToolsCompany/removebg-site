@@ -123,17 +123,19 @@ header {
 
 h1 {
   font-size: clamp(28px, 4.2vw, 42px);
-  line-height: 1.14;
+  line-height: 1.15;
   letter-spacing: -0.025em;
-  max-width: 700px;
+  max-width: 720px;
   margin-bottom: 16px;
   font-weight: 750;
+  text-wrap: balance;
 }
 
 .subtitle {
-  font-size: 17px;
+  font-size: 16.5px;
+  line-height: 1.65;
   color: var(--muted);
-  max-width: 640px;
+  max-width: 620px;
   margin-bottom: 24px;
 }
 
